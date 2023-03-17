@@ -1,3 +1,5 @@
+
+
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -50,7 +52,7 @@ namespace Factory.Controllers
     {
       Engineer thisEngineer = _db.Engineers
           //.Include(engineer => engineer.Machine)
-          .Include(engineer => engineer.JoinEntities)
+          .Include(engineer => engineer.EngineerMachines)
           .ThenInclude(join => join.Machine)
           .FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);

@@ -21,14 +21,14 @@ else
   @foreach(Engineer engineer in Model.Engineers)
   {
     string tags = "";
-    @if(engineer.JoinEntities.Count == 0)
+    @if(engineer.EngineerMachines.Count == 0)
     {
       tags = "This engineer does not have any machines.";
     }
     else
     {
       List<string> tagList = new List<string>();
-      @foreach(EngineerMachine join in engineer.JoinEntities)
+      @foreach(EngineerMachine join in engineer.EngineerMachines)
       {
         tagList.Add(join.Machine.MachineName);
       }

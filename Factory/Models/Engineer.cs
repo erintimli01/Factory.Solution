@@ -6,7 +6,7 @@ namespace Factory.Models
   public class Engineer
   {
     public int EngineerId { get; set; }
-    [Required(ErrorMessage = "An engineer must be added")]
+    //[Required(ErrorMessage = "An engineer must be added")]
     public string Name { get; set; }
     //public int MachineId { get; set; }
     //public Machine Machine { get; set; }

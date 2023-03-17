@@ -1,3 +1,5 @@
+
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
@@ -38,7 +40,7 @@ namespace Factory.Controllers
     {
       Machine thisMachine = _db.Machines
                                 .Include(cat => cat.Engineers)
-                                .ThenInclude(engineer => engineer.JoinEntities)
+                                .ThenInclude(engineer => engineer.EngineerMachines)
                                 //.ThenInclude(join => join.Tag)
                                 .FirstOrDefault(machine => machine.MachineId == id);
       return View(thisMachine);
