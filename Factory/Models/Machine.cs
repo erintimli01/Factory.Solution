@@ -8,6 +8,6 @@ namespace Factory.Models
     //[Required(ErrorMessage = "An engineer must be added")]
     public string MachineName { get; set; }
     //public List<Engineer> Engineers { get; set; }
-    public List<EngineerMachine> EngineerMachines { get; }
+    public List<EngineerMachine> JoinEntities { get; }
   }
 }

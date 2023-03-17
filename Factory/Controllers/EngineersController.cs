@@ -1,5 +1,3 @@
-
-
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -21,14 +19,14 @@ namespace Factory.Controllers
     public ActionResult Index()
     {
       List<Engineer> model = _db.Engineers
-                            //.Include(engineer => engineer.Machine)
+                            //.Include(engineer => engineer.Category)
                             .ToList();
       return View(model);
     }
 
     public ActionResult Create()
     {
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
+      //ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
       return View();
     }
 
@@ -37,7 +35,7 @@ namespace Factory.Controllers
     {
       if (!ModelState.IsValid)
       {
-          ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
+          //ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
           return View(engineer);
       }
       else
@@ -51,8 +49,8 @@ namespace Factory.Controllers
     public ActionResult Details(int id)
     {
       Engineer thisEngineer = _db.Engineers
-          //.Include(engineer => engineer.Machine)
-          .Include(engineer => engineer.EngineerMachines)
+          //.Include(engineer => engineer.Category)
+          .Include(engineer => engineer.JoinEntities)
           .ThenInclude(join => join.Machine)
           .FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
@@ -61,7 +59,7 @@ namespace Factory.Controllers
     public ActionResult Edit(int id)
     {
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
+      //ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
       return View(thisEngineer);
     }
 
@@ -91,7 +89,7 @@ namespace Factory.Controllers
     public ActionResult AddMachine(int id)
     {
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineers => engineers.EngineerId == id);
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Title");
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
       return View(thisEngineer);
     }
 
