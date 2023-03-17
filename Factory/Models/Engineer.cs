@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Factory.Models
 {
-  public class Engingeer
+  public class Engineer
   {
     public int EngineerId { get; set; }
     [Required(ErrorMessage = "An engineer must be added")]
