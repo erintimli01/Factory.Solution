@@ -1,17 +1,46 @@
+// // using Microsoft.AspNetCore.Mvc;
+
+// // namespace Factory.Controllers
+// // {
+// //     public class HomeController : Controller
+// //     {
+
+// //       [HttpGet("/")]
+// //       public ActionResult Index()
+// //       {
+// //         return View();
+// //       }
+// //     }
+// // }
 // using Microsoft.AspNetCore.Mvc;
+// using Factory.Models;
+// using System.Collections.Generic;
+// using System.Linq;
 
 // namespace Factory.Controllers
 // {
-//     public class HomeController : Controller
-//     {
+//   public class HomeController : Controller
+//   {
+//     private readonly FactoryContext _db;
 
-//       [HttpGet("/")]
-//       public ActionResult Index()
-//       {
-//         return View();
-//       }
+//     public HomeController(FactoryContext db)
+//     {
+//       _db = db;
 //     }
+
+//     [HttpGet("/")]
+//     public ActionResult Index()
+//     {
+//       Machine[] machines = _db.Machines.ToArray();
+//       Engineer[] engineers = _db.Engineers.ToArray();
+//       Dictionary<string,object[]> model = new Dictionary<string, object[]>();
+//       model.Add("machines", machines);
+//       model.Add("engineers", engineers);
+//       return View(model);
+//     }
+//   }
 // }
+
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
 using System.Collections.Generic;
@@ -31,11 +60,12 @@ namespace Factory.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      Machine[] machines = _db.Machines.ToArray();
       Engineer[] engineers = _db.Engineers.ToArray();
+      Machine[] machines = _db.Machines.ToArray();
       Dictionary<string,object[]> model = new Dictionary<string, object[]>();
-      model.Add("machines", machines);
+
       model.Add("engineers", engineers);
+      model.Add("machines", machines);
       return View(model);
     }
   }

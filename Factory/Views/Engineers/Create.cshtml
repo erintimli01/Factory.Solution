@@ -2,11 +2,10 @@
   Layout = "_Layout";
 }
 
-@using Factory.Models
 @model Factory.Models.Engineer
 
 <h1>Add Engineer</h1>
-<p>@Html.ValidationMessageFor(model => model.Name)</p>
+@* <p>@Html.ValidationMessageFor(model => model.Name)</p> *@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)

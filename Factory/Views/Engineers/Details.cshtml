@@ -4,10 +4,10 @@
 
 @using Factory.Models
 @model Factory.Models.Engineer
-
+@* DisplayFor(model => model.Name)</h3>  *@
 <h2>Engineer Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>  
+<h3>@Html.DisplayNameFor(model => model.Name) 
 @* <h3>@Html.DisplayNameFor(model => model.Machine): @Html.DisplayFor(model => model.Machine.MachineName)</h3> *@
 
 @if(@Model.JoinEntities.Count == 0)
@@ -20,7 +20,7 @@ else
   <ul>
     @foreach(EngineerMachine join in Model.JoinEntities)
     {
-      <li>Machine @join.Machine.MachineName</li>
+      <li>Machine: @join.Machine.MachineName</li>
       @using (Html.BeginForm("DeleteJoin", "Engineers"))
       {
         @Html.Hidden("joinId", @join.EngineerMachineId)
