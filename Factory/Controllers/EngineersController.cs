@@ -51,7 +51,7 @@ namespace Factory.Controllers
       Engineer thisEngineer = _db.Engineers
           .Include(engineer => engineer.Machine)
           .Include(engineer => engineer.JoinEntities)
-          .ThenInclude(join => join.Tag)
+          //.ThenInclude(join => join.Tag)
           .FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
@@ -89,7 +89,7 @@ namespace Factory.Controllers
     public ActionResult AddMachine(int id)
     {
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineers => engineers.EngineerId == id);
-      ViewBag.MachineId = new SelectList(_db.Tags, "MachineId", "Title");
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Title");
       return View(thisEngineer);
     }
 
