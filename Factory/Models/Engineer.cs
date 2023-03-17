@@ -11,6 +11,6 @@ namespace Factory.Models
     //public int MachineId { get; set; }
     //public Machine Machine { get; set; }
     //public List<Machine> Machines { get; set; }
-    public List<EngineerMachine> JoinEntities { get; }
+    public List<EngineerMachine> EngineerMachines { get; }
   }
 }
