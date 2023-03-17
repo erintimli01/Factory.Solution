@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _Dr.Sillystringz's Factory_
 
 #### By _Erin Timlin_
 
@@ -37,8 +37,8 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _It's broke_
+
 
 ## License
 
