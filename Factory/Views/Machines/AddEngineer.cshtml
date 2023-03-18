@@ -4,6 +4,25 @@
 
 @model Factory.Models.Machine
 
+<h4>Add an engineer to machine: @Html.DisplayFor(model => model.MachineName)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+
+  <div class="form-group">
+    @Html.Label("Engineer")
+    @Html.DropDownList("EngineerId", null, "-- Select an engineer --", new { @class = "form-control" })
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add</button>
+}
+
+<p>@Html.ActionLink("Back to List", "Index")</p>
+
+
+@* @model Factory.Models.Machine
+
 <h4>Add a engineer to machine: @Html.DisplayFor(model => model.MachineName)</h4>
 
 @using (Html.BeginForm())
@@ -15,4 +34,4 @@
 
   <input type="submit" value="Add Engineer"/>
 }
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Back to list", "Index")</p> *@
