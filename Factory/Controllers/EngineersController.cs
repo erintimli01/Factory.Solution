@@ -35,7 +35,7 @@ namespace Factory.Controllers
     {
       if (!ModelState.IsValid)
       {
-          //ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
+          ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
           return View(engineer);
       }
       else
