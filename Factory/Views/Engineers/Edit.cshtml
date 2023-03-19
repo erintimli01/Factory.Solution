@@ -4,9 +4,9 @@
 
 @model Factory.Models.Engineer
 
-<h2>Edit</h2>
+<h1>Edit</h1>
 
-<h4>Edit this engineer: @Html.DisplayFor(model => model.Name)</h4>
+<h3><strong>Edit this engineer:</strong> @Html.DisplayFor(model => model.Name)</h3>
 
 @using (Html.BeginForm())
 {
@@ -18,7 +18,5 @@
   @* @Html.LabelFor(model => model.Machine)
   @Html.DropDownList("MachineId") *@
 
-  <input type="submit" value="Save" />
+  <button type="submit" class="btn btn-success">Save edit</button>
 }
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
