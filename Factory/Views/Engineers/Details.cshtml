@@ -4,10 +4,9 @@
 
 @using Factory.Models
 @model Factory.Models.Engineer
-@* DisplayFor(model => model.Name)</h3>  *@
 <h2>Engineer Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name) 
+<h3>Engineer Name: @Html.DisplayFor(model => model.Name)</h3> 
 @* <h3>@Html.DisplayNameFor(model => model.Machine): @Html.DisplayFor(model => model.Machine.MachineName)</h3> *@
 
 @if(@Model.JoinEntities.Count == 0)
