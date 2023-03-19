@@ -12,9 +12,12 @@
 {
   @Html.HiddenFor(model => model.EngineerId)
 
-  @Html.LabelFor(model => model.Name)
+  @Html.LabelFor(model => model.Name, "Engineer Name:" )
   @Html.EditorFor(model => model.Name)
-
+<br>
+  @Html.LabelFor(model => model.HireDate, "Hire Date:")
+  @Html.EditorFor(model => model.HireDate)
+<br>
   @* @Html.LabelFor(model => model.Machine)
   @Html.DropDownList("MachineId") *@
 
