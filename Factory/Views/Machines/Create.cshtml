@@ -13,6 +13,13 @@
   @Html.LabelFor(model => model.MachineName, "Machine Name")
   <br>
   @Html.TextBoxFor(model => model.MachineName)
+  <br>
+  @Html.LabelFor(model => model.InstallDate, "Install Date")
+  <br>
+  @Html.TextBoxFor(model => model.InstallDate, new { @class = "form-control", type = "datetime-local" })
+
+  @Html.LabelFor(model => model.LastInspection, "Date of Last Inspection")
+  @Html.TextBoxFor(model => model.LastInspection, new { @class = "form-control", type = "datetime-local" })
   <button type="submit" class="btn btn-success">Add Machine</button>
 }
 <p>@Html.ActionLink("Show all machines", "Index")</p>

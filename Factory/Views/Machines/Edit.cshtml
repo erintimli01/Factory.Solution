@@ -15,7 +15,14 @@
   @Html.LabelFor(model => model.MachineName, "Machine Name")
   <br>
   @Html.EditorFor(model => model.MachineName)
+  <br>
+  @Html.LabelFor(model => model.InstallDate, "Install Date:")
+  @Html.EditorFor(model => model.InstallDate)
+  <br>
+  @Html.LabelFor(model => model.LastInspection, "Last Inspection Date:")
+  @Html.EditorFor(model => model.LastInspection)
+  <br>
 
- <button type="submit" class="btn btn-success">Save Edit</button>
+<button type="submit" class="btn btn-success">Save Edit</button>
 }
 <p>@Html.ActionLink("Back to list", "Index")</p>

@@ -8,6 +8,8 @@
 <h2>Machine Details🤖</h2>
 <hr />
 <h3>Machine Name: @Html.DisplayFor(model => model.MachineName)</h3>
+<h4><strong>Install Date:</strong> @Model.InstallDate?.ToString("MM/dd/yyyy")</h4>
+<h4><strong>Last Inspection:</strong> @Model.LastInspection?.ToString("MM/dd/yyyy")</h4>
 
 @if(@Model.JoinEntities.Count == 0)
 {
