@@ -2,7 +2,7 @@
 
 #### By _Erin Timlin_
 
-#### _{Brief description of application}_
+#### _A C# web application that Dr. Sillystringz can use to keep track of machine repairs. Here, they will be able to add engineer and machine details. They can add a machine to an engineer to keep track of which engineer is working on what machine._
 
 ## Technologies Used
 
@@ -15,7 +15,14 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines._
+_As the factory manager, I need to be able to select a engineer, see their details, and see a list of all machines that engineer is licensed to repair. I also need to be able to select a machine, see its details, and see a list of all engineers licensed to repair it._
+_As the factory manager, I need to add new engineers to our system when they are hired. I also need to add new machines to our system when they are installed._
+_I should not be able to create an engineer or a machine if the form's fields are empty or contain invalid values._
+_As the factory manager, I should be able to add new machines even if no engineers are employed. I should also be able to add new engineers even if no machines are installed._
+_As the factory manager, I need to be able to add or remove machines that a specific engineer is licensed to repair. I also need to be able to modify this relationship from the other side, and add or remove engineers from a specific machine._
+_I should not be able to add a machine to an engineer if there are no machines. Likewise I should not be able to add an engineer to a machine if there are no engineers._
+_When I access the application, I should see a splash page that lists all engineers and machines._
 
 ## Setup/Installation Requirements
 
@@ -33,15 +40,13 @@ _{This is a detailed description of your application. Give as much detail as nee
 * _Be sure to change [YOUR-USERNAME-HERE] to your username for MySQLWorkbench and [YOUR-PASSWORD-HERE] to your password for MySQLWorkbench, leaving out the square brackets_
 * _Within the production directory "Factory", run `dotnet watch run` in the command line to start the project in development mode with a watcher._
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
-
 ## Known Bugs
 
-* _It's broke_
+* _No Known Bugs!_
+
 
 
 ## License
+_Please reach out with any questions or concerns! Also feel free to make any contributions!_
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
-
-Copyright MIT (c) _March 2023_ _Erin Timlin_
+Copyright [MIT](license.txt) (c) _March 2023_ _Erin Timlin_
