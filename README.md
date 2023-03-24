@@ -38,6 +38,7 @@ _When I access the application, I should see a splash page that lists all engine
 }
 ```
 * _Be sure to change [YOUR-USERNAME-HERE] to your username for MySQLWorkbench and [YOUR-PASSWORD-HERE] to your password for MySQLWorkbench, leaving out the square brackets_
+* _In the command line, run the command `dotnet restore` to install all dependencies including EF Core. Then, run `dotnet ef database update` to allow MySQL to auto-create the required database for this project._
 * _Within the production directory "Factory", run `dotnet watch run` in the command line to start the project in development mode with a watcher._
 
 ## Known Bugs
